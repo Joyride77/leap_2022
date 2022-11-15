@@ -1,0 +1,41 @@
+html {
+    position: absolute;
+}
+
+body {
+    background-color: aquamarine;
+    font-size: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    position: relative;
+}
+
+@media only screen and (max-width :1200px) {
+    body {
+        background-color:royalblue;
+    }
+    body::before {
+        content: "1200px";
+    }
+
+}
+
+@media only screen and (max-width :768px) {
+    body {
+        background-color: brown;
+    }
+    body::before {
+        content: "768px";
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    body {
+        background-color: blueviolet;
+    }
+
+    body::before {
+        content: "576px";
+    }
+}
