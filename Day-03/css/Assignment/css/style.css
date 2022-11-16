@@ -3,7 +3,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 .column {
     float: left;
     width: calc(100%/6);

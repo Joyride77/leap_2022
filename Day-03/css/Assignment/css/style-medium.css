@@ -3,7 +3,6 @@
     width: calc((100%/3) - 45px);
     margin: 20px;
     height: 300px;
-    /* border-radius: 30px; */
 }
 
 .hero {
