@@ -1,0 +1,7 @@
+body {
+    background-color:royalblue;
+}
+body::before {
+    content: "1200px";
+}
+

@@ -1,0 +1,6 @@
+body {
+    background-color: blueviolet;
+}
+body::before {
+    content: "576px";
+}
