@@ -20,7 +20,7 @@
         scroll-snap-type: y proximity;
       }
       .banner-image {
-        background-image: url(./img/wall1.jpg);
+        background-image: url(./img/wall.jpg);
         background-size: cover;
         background-position: center;
       }
@@ -65,7 +65,10 @@
       label {
         width: 100%;
       }
-
+      .custom-toggler.navbar-toggler {
+          border-color: white;
+          color: white;
+      }
       
 
       
@@ -73,10 +76,10 @@
   </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg p-md-3 my-bg">
+    <nav class="navbar fixed-top navbar-expand-lg p-md-3 my-bg bg-dark">
       <div class="container">
         <a href="#" class="navbar-brand my-text-shadow"></i><h5 class="d-inline-block text-white">BOOTSTRAP</h5></a>
-        <button type="button" class="navbar-toggler" data-bs-target="#toggleMobileMenu" data-bs-toggle="collapse" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler custom-toggler" data-bs-target="#toggleMobileMenu" data-bs-toggle="collapse" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
