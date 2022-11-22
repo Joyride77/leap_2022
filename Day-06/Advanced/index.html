@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Bootstrap</title>
+
+    <!-- Bootstrap links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   
+    <!-- My style -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-snap-type: y proximity;
+      }
+      .banner-image {
+        background-image: url(./img/wall.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .modal-image {
+        background-image: url(./img/ocean.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 30px rgba(0, 149, 255, 0.59);
+      }
+      .about-image {
+        background-image: url(./img/4.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 500px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 30px rgba(0, 149, 255, 0.59);
+      }
+      .accordion-image {
+        background-image: url(./img/waves.jpeg);
+        background-size: cover;
+        background-position: center;
+      }
+      .person-image {
+        background-image: url(./img/person.jpeg);
+        background-size: cover;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      .my-text-shadow {
+        text-shadow: 0px 0px 2px #222;
+      }
+      .my-arrow-down {
+        font-size: 3rem;
+        transition: 0.7s 0s all ease-in-out;
+      }
+      .my-arrow-down:hover {
+        font-size: 4rem;
+      }
+      .my-bg {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .my-bg-dark-blue {
+        background: linear-gradient(180deg, #172832, #233947, #47626d);
+      }
+      .my-bg-dark-blue-reverse {
+        background: linear-gradient(180deg, #47626d, #233947, #172832);
+      }
+      .my-container {
+        height: 100vh;
+        scroll-snap-align: start;
+      }
+      .my-button {
+        background-color: transparent;
+      }
+      input,
+      textarea,
+      select {
+        margin: 10px 0 0 0;
+        width: 100%;
+      }
+      label {
+        width: 100%;
+      }
+      .custom-toggler.navbar-toggler {
+          border-color: white;
+          color: white;
+      }
+      
+
+      
+    </style>
+  </head>
+<body>
+  <div class="container">
+    
+  </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark fixed-top navbar-expand-lg p-md-3 my-bg bg-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand my-text-shadow"></i><h5 class="d-inline-block">BOOTSTRAP</h5></a>
+        <button type="button" class="navbar-toggler custom-toggler" data-bs-target="#toggleMobileMenu" data-bs-toggle="collapse" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="toggleMobileMenu">
+          <div class="mx-auto">
+
+          </div>
+          <ul class="navbar-nav ms-auto text-end my-text-shadow fs-5 fw-semibold">
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Image -->
+    <div class="my-container">
+      <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+        <div class="content text-center">
+          <h1 class="my-text-shadow">WELCOME</h1>
+          <a href="#modal">
+            <i class="bi bi-caret-down my-arrow-down text-black"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div id="modal" class="my-container my-bg-dark-blue d-flex align-items-center text-white">
+      <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-md col-sm-12 text-md-start text-center">
+            <h1>Better solutions <span class="text-warning">For your Bussiness</span></h1>
+            <p>We're the integrated learning solution that delivers impactful programs for everyone.</p>
+            <button type="button" class="btn text-primary border-primary fw-bold" data-bs-toggle="modal" data-bs-target="#demo-modal">
+              Get Started
+            </button>
+            <a href="#my-carousel"><i class="bi bi-caret-down my-arrow-down text-primary d-block"></i></a>
+            <div id="demo-modal" class="modal fade text-black">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Enrollment</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <!-- body -->
+                        <div class="modal-body">
+                            <p>Fill out this and we will get back to you</p>
+                            <form>
+                              <div class="mb-3">
+                                <label for="validationCustom01" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01">
+                              </div>
+                              <div class="mb-3">
+                                <label for="validationCustom02" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                              </div>
+                            </form>
+                        </div>
+                        
+                        
+        
+                        <!-- footer -->
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col d-md-block d-none">
+            <div class="modal-image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="my-carousel" class="my-container my-bg-dark-blue-reverse">
+      <div id="carousel-demo" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel-demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carousel-demo" data-bs-slide-to="1" class="active"></button>
+            <button type="button" data-bs-target="#carousel-demo" data-bs-slide-to="2" class="active"></button>
+        </div>
+        <div class="carousel-inner vh-100">
+            <div class="carousel-item active">
+                <img src="./img/1.jpg" alt="test" class="d-block w-100 vh-100">
+            </div>
+            <div class="carousel-item active">
+                <img src="./img/2.jpg" alt="test" class="d-block w-100 vh-100">
+            </div>
+            <div class="carousel-item active">
+                <img src="./img/3.jpg" alt="test" class="d-block w-100 vh-100">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- About us -->
+    <div id="about-us" class="my-container my-bg-dark-blue-reverse  d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-md col-sm-12">
+            <div class="about-image"></div>
+          </div>
+          <div class="col-md col-sm-12 text-white pt-sm-5">
+            <h1>ABOUT US</h1>
+            <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem cumque at deserunt ea enim, fugit eum ad dolore voluptas officia!</h5>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore qui fugit blanditiis reiciendis hic dolorum natus atque sapiente impedit tempora, nesciunt nostrum ut nemo nam dignissimos veritatis aspernatur incidunt quibusdam.</p>
+            <button type="submit" class="btn btn-none border text-white"><i class="bi bi-caret-right"></i>Read More</button>
+            <a href="#service"><i class="bi bi-caret-down my-arrow-down text-primary d-block text-md-start text-sm-center"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service -->
+    <div id="aservice" class="my-container my-bg-dark-blue d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+          <div class="col-md col-sm-12 text-white pb-sm-5">
+            <h1>SERVICES</h1>
+            <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem cumque at deserunt ea enim, fugit eum ad dolore voluptas officia!</h5>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore qui fugit blanditiis reiciendis hic dolorum natus atque sapiente impedit tempora, nesciunt nostrum ut nemo nam dignissimos veritatis aspernatur incidunt quibusdam.</p>
+            <button type="submit" class="btn btn-none border text-white"><i class="bi bi-caret-right"></i>Read More</button>
+            <a href="#faq"><i class="bi bi-caret-down my-arrow-down text-primary d-block text-md-start text-sm-center"></i></a>
+          </div>
+          <div class="col-md col-sm-12">
+            <div class="about-image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion -->
+    <div id="faq" class="my-container accordion-image d-flex align-items-center">
+      <div class="container text-white">
+        <h1 class="my-text-shadow text-center m-3">FAQ</h1>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item rounded-3">
+            <h2 class="accordion-header bg-transparent" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Where exactly are you located?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            </div>
+          </div>
+          <div class="accordion-item rounded-3">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                How much does it cost to attent?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+            </div>
+          </div>
+          <div class="accordion-item rounded-3">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                What do I need to know?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div class="container-fluid my-bg-dark-blue d-flex align-items-center">
+      <div class="container text-white my-5">
+        <h1 class="my-text-shadow text-center m-3">Our Team</h1>
+        <p class="text-center">We listened to our people about what and how they wanted to learn, and most made it clear business was their preferred platform.</p>
+        <div class="row my-5 d-flex justify-content-center">
+
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div class="card text-bg-dark rounded-5">
+              <div class="modal-image"></div>
+              <div class="card-img-overlay">
+                <div class=" d-flex justify-content-center m-3">
+                  <div class="person-image"></div>
+                </div>
+                <h2 class="card-title my-text-shadow">John Doe</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At fuga adipisci dicta praesentium distinctio explicabo!</p>
+                <div class="d-flex justify-content-sbetween">
+                  <i class="bi bi-twitter mx-auto"></i>
+                  <i class="bi bi-facebook mx-auto"></i>
+                  <i class="bi bi-instagram mx-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div class="card text-bg-dark rounded-5">
+              <div class="modal-image"></div>
+              <div class="card-img-overlay">
+                <div class=" d-flex justify-content-center m-3">
+                  <div class="person-image"></div>
+                </div>
+                <h2 class="card-title my-text-shadow">John Doe</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At fuga adipisci dicta praesentium distinctio explicabo!</p>
+                <div class="d-flex justify-content-sbetween">
+                  <i class="bi bi-twitter mx-auto"></i>
+                  <i class="bi bi-facebook mx-auto"></i>
+                  <i class="bi bi-instagram mx-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div class="card text-bg-dark rounded-5">
+              <div class="modal-image"></div>
+              <div class="card-img-overlay">
+                <div class=" d-flex justify-content-center m-3">
+                  <div class="person-image"></div>
+                </div>
+                <h2 class="card-title my-text-shadow">John Doe</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At fuga adipisci dicta praesentium distinctio explicabo!</p>
+                <div class="d-flex justify-content-sbetween">
+                  <i class="bi bi-twitter mx-auto"></i>
+                  <i class="bi bi-facebook mx-auto"></i>
+                  <i class="bi bi-instagram mx-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div class="card text-bg-dark rounded-5">
+              <div class="modal-image"></div>
+              <div class="card-img-overlay">
+                <div class=" d-flex justify-content-center m-3">
+                  <div class="person-image"></div>
+                </div>
+                <h2 class="card-title my-text-shadow">John Doe</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At fuga adipisci dicta praesentium distinctio explicabo!</p>
+                <div class="d-flex justify-content-sbetween">
+                  <i class="bi bi-twitter mx-auto"></i>
+                  <i class="bi bi-facebook mx-auto"></i>
+                  <i class="bi bi-instagram mx-auto"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact info -->
+    <div class="my-bg-dark-blue-reverse text-white d-flex align-items-between">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class="my-text-shadow text-center m-3">Contact info</h1>
+            <div>
+              <ul class="list-group">
+                <li class="list-group-item"><span class="fw-bold">Main Location: </span>50 Main st Boston MA</li>
+                <li class="list-group-item"><span class="fw-bold">Enrollment Phone: </span>(555) 555-5555</li>
+                <li class="list-group-item"><span class="fw-bold">Student Phone: </span>(333) 333-3333</li>
+                <li class="list-group-item"><span class="fw-bold">Enrollment Email: </span>(555) enroll@frontendbc.test</li>
+                <li class="list-group-item"><span class="fw-bold">Student Email: </span>student@frontendbc.test</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <!-- Footer -->
+        <div class="row d-flex justify-content-center m-5">
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div>
+              <h3>Logo brand</h3>
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p>United States</p>
+            </div>
+            <div>
+              <p><span class="fw-bold">Phone: </span>+1 5589 55488 55</p>
+              <p><span class="fw-bold">Email: </span>info@example.com</p>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div>
+              <h3>Useful Links</h3>
+              <ul>
+                <li class="text-primary my-3">Home</li>
+                <li class="text-primary my-3">About Us</li>
+                <li class="text-primary my-3">Services</li>
+                <li class="text-primary my-3">Terns of service</li>
+                <li class="text-primary my-3">Privacy policy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div>
+              <h3>Our Services</h3>
+              <ul>
+                <li class="text-primary my-3">Web Design</li>
+                <li class="text-primary my-3">Web development</li>
+                <li class="text-primary my-3">Product Managment</li>
+                <li class="text-primary my-3">Marketing</li>
+                <li class="text-primary my-3">Graphic Design</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg col-md-6 col-sm-12 mb-2">
+            <div>
+              <h3>Our Social Networks</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aspernatur.</p>
+            </div>
+            <div class="d-flex justify-content-between text-primary">
+              <i class="bi bi-twitter mx-auto"></i>
+              <i class="bi bi-facebook mx-auto"></i>
+              <i class="bi bi-instagram mx-auto"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-5 text-center">
+          <div class="col">
+            Copyright <i class="bi bi-c-circle"></i> 2022 Logo Brand
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
