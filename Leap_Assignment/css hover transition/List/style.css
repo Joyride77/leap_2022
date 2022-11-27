@@ -1,0 +1,32 @@
+.container {
+    max-width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+}
+.no-style {
+    list-style: none;
+    padding: 0;
+}
+
+.text {
+    text-decoration: none;
+    color: brown;
+    font-size: 2rem;
+    transition: 1s 0s all linear;
+}
+
+.border {
+    border-top: 1px solid green;
+    transition: 1s 0s all linear;
+    padding: 20px 0 20px 50px;
+}
+
+.list-container:hover {
+    padding: 40px 50px;
+    
+}
+
+.text:hover {
+    font-size: 3rem;
+    padding: 20px 0 20px 20px;
+}

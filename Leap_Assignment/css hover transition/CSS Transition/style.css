@@ -1,0 +1,24 @@
+.hover  {
+    width: 200px;
+    height: 200px;
+    background-color:rgb(70, 33, 33);
+    transition: 2s 0s all ease-in-out;
+}
+
+.hover:hover {
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+}
+
+.active {
+    width: 200px;
+    height: 200px;
+    background-color:blueviolet;
+    transition: 2s 0s all ease-in-out;
+}
+
+.active:active {
+    width: 100%;
+    background-color: blue;
+}
+
