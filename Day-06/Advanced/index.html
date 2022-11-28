@@ -132,8 +132,8 @@
       </div>
     </nav>
 
-    <!-- Image -->
-    <div class="my-container">
+    <!-- Hero Image -->
+    <div id="hero" class="my-container">
       <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
         <div class="content text-center">
           <h1 class="my-text-shadow">WELCOME</h1>
@@ -148,13 +148,13 @@
     <div id="modal" class="my-container my-bg-dark-blue d-flex align-items-center text-white">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md col-sm-12 text-md-start text-center">
+          <div class="col-md col-12 text-md-start text-center">
             <h1>Better solutions <span class="text-warning">For your Bussiness</span></h1>
             <p>We're the integrated learning solution that delivers impactful programs for everyone.</p>
-            <button type="button" class="btn text-primary border-primary fw-bold" data-bs-toggle="modal" data-bs-target="#demo-modal">
+            <button type="button" class="btn text-primary border-primary fw-bold d-block mx-md-0 mx-auto" data-bs-toggle="modal" data-bs-target="#demo-modal">
               Get Started
             </button>
-            <a href="#my-carousel"><i class="bi bi-caret-down my-arrow-down text-primary d-block"></i></a>
+            <a href="#my-carousel"><i class="bi bi-caret-down my-arrow-down text-primary"></i></a>
             <div id="demo-modal" class="modal fade text-black">
                 <div class="modal-dialog modal-dialog-scrollable">
                     <div class="modal-content">
@@ -236,33 +236,42 @@
     <div id="about-us" class="my-container my-bg-dark-blue-reverse  d-flex align-items-center">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md col-sm-12">
+          <div class="col-md col-12">
             <div class="about-image"></div>
           </div>
-          <div class="col-md col-sm-12 text-white pt-sm-5">
+          <div class="col-md col-12 text-white pt-5">
             <h1>ABOUT US</h1>
             <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem cumque at deserunt ea enim, fugit eum ad dolore voluptas officia!</h5>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore qui fugit blanditiis reiciendis hic dolorum natus atque sapiente impedit tempora, nesciunt nostrum ut nemo nam dignissimos veritatis aspernatur incidunt quibusdam.</p>
-            <button type="submit" class="btn btn-none border text-white"><i class="bi bi-caret-right"></i>Read More</button>
-            <a href="#service"><i class="bi bi-caret-down my-arrow-down text-primary d-block text-md-start text-sm-center"></i></a>
+            <button type="button" class="btn btn-none border text-white d-block mx-md-0 mx-auto" data-bs-toggle="collapse" data-bs-target="#demo"><i class="bi bi-caret-down"></i>Read More</button>
+            <div id="demo" class="collapse show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde commodi omnis dolorum eligendi ratione placeat veniam cum, molestiae impedit repellat.</div>
+            <div class="text-md-start text-center">
+              <a href="#service"><i class="bi bi-caret-down my-arrow-down text-primary"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Service -->
-    <div id="aservice" class="my-container my-bg-dark-blue d-flex align-items-center">
+    <div id="service" class="my-container my-bg-dark-blue d-flex align-items-center">
       <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-md col-sm-12 text-white pb-sm-5">
+          <div class="col-md col-12 text-white pb-md-0 pb-5">
             <h1>SERVICES</h1>
             <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem cumque at deserunt ea enim, fugit eum ad dolore voluptas officia!</h5>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore qui fugit blanditiis reiciendis hic dolorum natus atque sapiente impedit tempora, nesciunt nostrum ut nemo nam dignissimos veritatis aspernatur incidunt quibusdam.</p>
-            <button type="submit" class="btn btn-none border text-white"><i class="bi bi-caret-right"></i>Read More</button>
-            <a href="#faq"><i class="bi bi-caret-down my-arrow-down text-primary d-block text-md-start text-sm-center"></i></a>
+            <button type="button" class="btn btn-none border text-white d-block mx-md-0 mx-auto" data-bs-toggle="collapse" data-bs-target="#demo"><i class="bi bi-caret-down"></i>Read More</button>
+            <div id="demo" class="collapse show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde commodi omnis dolorum eligendi ratione placeat veniam cum, molestiae impedit repellat.</div>
+            <div class="text-md-start text-center d-md-block d-none">
+              <a href="#faq"><i class="bi bi-caret-down my-arrow-down text-primary"></i></a>
+            </div>
           </div>
-          <div class="col-md col-sm-12">
+          <div class="col-md col-12">
             <div class="about-image"></div>
+          </div>
+          <div class="text-md-start text-center d-md-none d-block">
+            <a href="#faq"><i class="bi bi-caret-down my-arrow-down text-primary"></i></a>
           </div>
         </div>
       </div>
@@ -270,7 +279,7 @@
 
     <!-- Accordion -->
     <div id="faq" class="my-container accordion-image d-flex align-items-center">
-      <div class="container text-white">
+      <div class="container text-white text-center">
         <h1 class="my-text-shadow text-center m-3">FAQ</h1>
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item rounded-3">
@@ -304,17 +313,20 @@
             </div>
           </div>
         </div>
+        <a href="#team"><i class="bi bi-caret-down my-arrow-down text-primary"></i></a>
       </div>
+      
     </div>
+    
 
     <!-- Team -->
-    <div class="container-fluid my-bg-dark-blue d-flex align-items-center">
-      <div class="container text-white my-5">
+    <div id="team" class="container-fluid my-bg-dark-blue d-flex align-items-center">
+      <div class="container text-white my-5 text-center">
         <h1 class="my-text-shadow text-center m-3">Our Team</h1>
         <p class="text-center">We listened to our people about what and how they wanted to learn, and most made it clear business was their preferred platform.</p>
         <div class="row my-5 d-flex justify-content-center">
 
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          <div class="col-lg-3 col-md-6 col-12 mb-2">
             <div class="card text-bg-dark rounded-5">
               <div class="modal-image"></div>
               <div class="card-img-overlay">
@@ -331,7 +343,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          
+          <div class="col-lg-3 col-md-6 col-12 mb-2">
             <div class="card text-bg-dark rounded-5">
               <div class="modal-image"></div>
               <div class="card-img-overlay">
@@ -348,7 +361,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          <div class="col-lg-3 col-md-6 col-12 mb-2">
             <div class="card text-bg-dark rounded-5">
               <div class="modal-image"></div>
               <div class="card-img-overlay">
@@ -365,7 +378,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          <div class="col-lg-3 col-md-6 col-12 mb-2">
             <div class="card text-bg-dark rounded-5">
               <div class="modal-image"></div>
               <div class="card-img-overlay">
@@ -382,11 +395,10 @@
               </div>
             </div>
           </div>
-         
         </div>
       </div>
     </div>
-
+    
     <!-- Contact info -->
     <div class="my-bg-dark-blue-reverse text-white d-flex align-items-between">
       <div class="container">
@@ -406,7 +418,7 @@
         </div>
       <!-- Footer -->
         <div class="row d-flex justify-content-center m-5">
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          <div class="col-lg col-md-6 col-12 mb-2">
             <div>
               <h3>Logo brand</h3>
               <p>A108 Adam Street</p>
@@ -418,7 +430,7 @@
               <p><span class="fw-bold">Email: </span>info@example.com</p>
             </div>
           </div>
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          <div class="col-lg col-md-6 col-12 mb-2">
             <div>
               <h3>Useful Links</h3>
               <ul>
@@ -430,7 +442,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          <div class="col-lg col-md-6 col-12 mb-2">
             <div>
               <h3>Our Services</h3>
               <ul>
@@ -443,7 +455,7 @@
             </div>
           </div>
 
-          <div class="col-lg col-md-6 col-sm-12 mb-2">
+          <div class="col-lg col-md-6 col-12 mb-2">
             <div>
               <h3>Our Social Networks</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aspernatur.</p>
@@ -460,6 +472,7 @@
           <div class="col">
             Copyright <i class="bi bi-c-circle"></i> 2022 Logo Brand
           </div>
+          <a href="#hero"><i class="bi bi-caret-up my-arrow-down text-primary"></i></a>
         </div>
 
       </div>

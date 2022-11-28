@@ -1,0 +1,14 @@
+h1 {
+    background-color: bisque;
+    text-align: center;
+}
+
+#myRectangle {
+    width: 400px;
+    height: 200px;
+}
+
+#myCircle {
+    width: 500px;
+    height: 500px;
+}

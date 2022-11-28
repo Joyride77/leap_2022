@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid black;
+    box-shadow: 0 0 20px black;
+    margin: 100px auto;
+}
+
+.shape {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 1s 0s all linear;
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+
+.normal {
+    background-color: blue;
+    animation-name: normal;
+    animation-duration: 4s;
+}
+
+.example-1 {
+    background-color: green;
+}
+
+.example-2 {
+    background-color: red;
+}
+
+@keyframes normal {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+
