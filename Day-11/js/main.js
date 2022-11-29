@@ -128,3 +128,8 @@ if (0<n) {
 } else {
     alert('Negative');
 }
+
+switch(n) {
+    case 1 :
+        
+}
