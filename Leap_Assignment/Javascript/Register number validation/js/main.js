@@ -1,4 +1,4 @@
-const registorNumber = prompt("Write Registor Number")
+const registorNumber = prompt("Write Registor Number");
 const registorChar1 = registorNumber.substr(0,1);
 const registorChar2 = registorNumber.substr(1,2);
 
@@ -7,5 +7,5 @@ if (!Number.isInteger(Number(registorChar1)) && !Number.isInteger(Number(registo
     alert('Your register characters are correct');
 }
 else {
-    alert('Your register characters are wrong')
+    alert('Your register characters are wrong');
 }

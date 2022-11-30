@@ -99,14 +99,29 @@
 //     alert('Your Registor Number is incorrect!')
 // }
 
-const registorNumber = prompt("Write Registor Number")
-const registorChar1 = registorNumber.substr(0,1);
-const registorChar2 = registorNumber.substr(1,2);
+// const registorNumber = prompt("Write Registor Number")
+// const registorChar1 = registorNumber.substr(0,1);
+// const registorChar2 = registorNumber.substr(1,2);
 
-const registorNum = registorNumber.substr(2,9);
-if (!Number.isInteger(Number(registorChar1)) && !Number.isInteger(Number(registorChar2)) && Number.isInteger(Number(registorNum)) && registorNumber.length == 10) {
-    alert('Your register characters are correct');
+// const registorNum = registorNumber.substr(2,9);
+// if (!Number.isInteger(Number(registorChar1)) && !Number.isInteger(Number(registorChar2)) && Number.isInteger(Number(registorNum)) && registorNumber.length == 10) {
+//     alert('Your register characters are correct');
+// }
+// else {
+//     alert('Your register characters are wrong')
+// }
+
+const phoneNum = prompt("Please type your phone number!");
+const phoneNationNum1 = phoneNum.substr(0,1);
+const phoneNationNum2 = phoneNum.substr(1,1);
+const phoneNationNum3 = phoneNum.substr(2,1);
+const phoneNationNum4 = phoneNum.substr(3,1);
+const phoneNationNumAll = phoneNum.substr(0,4);
+const phoneNumber = phoneNum.substr(4,11);
+
+if (!Number.isInteger(Number(phoneNationNum1)) && Number.isInteger(Number(phoneNationNumAll)) && phoneNationNum2 == 9 && phoneNationNum3 == 7 && phoneNationNum4 == 6 && Number.isInteger(Number(phoneNumber)) && phoneNationNum1 == '+' && phoneNum.length == 12) {
+    alert("Your phone number is Correct");
+} else {
+    alert("Your phone number is Incorrect");
 }
-else {
-    alert('Your register characters are wrong')
-}
+
