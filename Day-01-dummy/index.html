@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="my-form" action="result.html">
+        <div class="row container">
+            <div id="white" class="background-white col-2 padding">
+                    <h1 class="blue">General Information</h1>
+                    <div class="row gap">
+                        <div class="col-2">
+                            <input type="text" name="first-name" placeholder="First name">
+                        </div>
+                        <div class="col-2">
+                            <input type="text" name="surname" placeholder="Surname">
+                        </div>
+                    </div>
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="date" name="birth-date">
+                    <input type="text" name="company" placeholder="Company">
+                    <select name="position">
+                        <option>Position</option>
+                        <option>Manager</option>
+                        <option>Engineer</option>
+                        <option>Security</option>
+                    </select>
+            </div>
+            <div id="blue" class="background-blue col-2 padding">
+                <h1 class="white">Contact Details</h1>
+                    <input type="text" name="address-street" placeholder="Street">
+                    <input type="text" name="address-add-info" placeholder="Additional Information">
+                    <div class="row gap">
+                        <div class="col-2">
+                            <input type="number" name="zip-code" placeholder="Zip-code">
+                        </div>
+                        <div class="col-2">
+                            <select name="place">
+                                <option>Place</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <select name="country">
+                        <option>Country</option>
+                        <option>Mongolia</option>
+                        <option>Korea</option>
+                        <option>Japan</option>
+                    </select>
+                    <div class="row gap">
+                        <div class="col-2">
+                            <input type="number" name="code" placeholder="Code">
+                        </div>
+                        <div class="col-2">
+                            <input type="number" name="phone-number" placeholder="Phone Number">
+                        </div>
+
+                    </div>
+                    <input id="checkbox" type="checkbox" name="terms-condition">
+                    <label class="white" for="terms-condition">I do accept the <a href="#">Terms and Conditions</a> of your site.</label>
+                    <button id="submit-btn" type="submit">Register Badge</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
