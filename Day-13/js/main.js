@@ -33,3 +33,29 @@
 // let num2 = Number(prompt('Give Random Number'));
 
 // console.log(Math.ceil(Math.random() * (Math.max(num1,num2) - Math.min(num1,num2)) + Math.min(num1,num2)));
+
+// let count = 1;
+// while (count <= 50) {
+//     console.log(Math.ceil(Math.random() * (Math.max(num1,num2) - Math.min(num1,num2)) + Math.min(num1,num2)));
+//     count = count + 1;
+// }
+
+// console.log('loop ended');
+
+// let answer = prompt("Do you want to play? Yes/No");
+// while (answer == 'yes') {5
+//     answer = prompt("Want to continue?");
+//     if (answer == 'yes') {
+//         alert('Thanks');
+//     }
+// }
+// console.log('you lose');
+
+let number = Number(prompt('Give number'));
+let num1 = 1;
+let sum = 0;
+while (num1 <= number) {
+    num1 = num1 + 1;
+    sum = sum + num1;
+}
+console.log(sum);
