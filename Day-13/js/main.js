@@ -52,9 +52,9 @@
 // console.log('you lose');
 
 let number = Number(prompt('Give number'));
-let num1 = 1;
+let num1 = 0;
 let sum = 0;
-while (num1 <= number) {
+while (num1 < number) {
     num1 = num1 + 1;
     sum = sum + num1;
 }
