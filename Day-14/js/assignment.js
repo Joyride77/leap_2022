@@ -25,5 +25,3 @@ for (n = Number(prompt("Give number")); n > 0; n = Math.floor(n / 10)) {
     sum = sum + rem;
 }
 console.log(sum);
-
-// 2 
