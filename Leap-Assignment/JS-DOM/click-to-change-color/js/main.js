@@ -1,8 +1,6 @@
-let myButton = document.getElementById('myButton');
-let red = document.getElementsByClassName('red');
-let yellow = document.getElementsByClassName('yellow');
+function changeBackground () {
+    document.getElementsByClassName('red')[0].style = 'background-color:red';
+    document.getElementsByClassName('blue')[0].style = 'background-color:blue';
 
-myButton.addEventListener ("click", () => {
-    red.style = 'background-color : red';
-    yellow.style = 'background-color : yellow';
-})
+}
+myButton.addEventListener("click",changeBackground);
