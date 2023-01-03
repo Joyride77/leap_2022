@@ -84,8 +84,8 @@ h1 {
 
 .reset {
   position: absolute;
-    top: 10rem;
-    left: 2rem;
+  top: 2rem;
+  left: 40rem;
 }
 
 .guess {
