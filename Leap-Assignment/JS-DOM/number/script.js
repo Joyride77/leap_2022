@@ -16,7 +16,7 @@ highScore.textContent = localStorage.getItem("highScore") || 0;
 button.addEventListener('click', () => {
     let inputValue = Number(input.value);
     let scoreNum = Number(score.textContent)
-    // input.value = '';
+    input.value = '';
     function checkNum(num) {
         if (num >= 20) {
             message.innerHTML = "20-оос бага тоо оруулна уу!";
